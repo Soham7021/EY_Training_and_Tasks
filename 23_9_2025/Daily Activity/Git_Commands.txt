@@ -1,0 +1,27 @@
+git config --global user.name "Name"
+
+git config --global user.email "Email"
+
+"Git Status" -  To check the status of the git in the Local Repository
+
+"Git init" - To initialize the Git inside your local project folder
+
+"Git add ." - To stage all your Local file from
+
+"Git Commit -m 'Comment'" -  To commit all the changes made to the Repo
+
+"Git Log" -  To see the commit history
+
+"Git Push Origin 'Branch_Name'" - To push the changes to the Global Repo
+
+"Git Clone 'URL_of_Repo'" - To clone the repo from the github
+
+"Git Pull 'URL_of_Repo'" - To Pull the repo from the github
+
+"Git Branch" - To see all the branches in the Repo
+
+"Git Branch 'Branch_Name' " - To create the branch from where you are
+
+"Git Checkout 'Branch_Name'" - To Go to the branch where we want from the current branch
+
+"Git merge 'Branch_Name" -  To merge the branch to the main/master branch
