@@ -6,6 +6,8 @@ git config --global user.email "Email"
 
 "Git init" - To initialize the Git inside your local project folder
 
+"Git Remote add Origin 'URL'" - To initialize the Repo to take local repo to Github
+
 "Git add ." - To stage all your Local file from
 
 "Git Commit -m 'Comment'" -  To commit all the changes made to the Repo
