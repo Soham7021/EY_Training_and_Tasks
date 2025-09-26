@@ -26,7 +26,7 @@ where department = 'consulting';
 
 select * from (select * from employees order by salary desc limit 2) as tbl
 order by salary asc
-limit 1
+limit 1;
 
 Delete from employees where id='2';
 
