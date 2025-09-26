@@ -24,6 +24,10 @@ Where id='3';
 select name, age from employees
 where department = 'consulting';
 
+select * from (select * from employees order by salary desc limit 2) as table
+order by salary asc
+limit 1
+
 Delete from employees where id='2';
 
 select * from employees;
