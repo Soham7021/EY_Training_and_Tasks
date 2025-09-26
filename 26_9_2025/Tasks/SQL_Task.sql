@@ -24,7 +24,7 @@ Where id='3';
 select name, age from employees
 where department = 'consulting';
 
-select * from (select * from employees order by salary desc limit 2) as table
+select * from (select * from employees order by salary desc limit 2) as tbl
 order by salary asc
 limit 1
 
