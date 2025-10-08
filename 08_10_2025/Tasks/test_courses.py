@@ -36,6 +36,8 @@ def test_invalid_course():
     response = client.post("/courses", json=course)
     assert response.status_code == 422
     assert "greater_than" in response.text
+    assert "string_too_short" in response.text
+
 
 def test_get_courses():
     response = client.get("/courses")
