@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            display: none; /* Hidden until button is clicked */
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student List</h1>
+    <button onclick="loadStudents()">Show Students</button>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        function loadStudents() {
+            fetch("http://127.0.0.1:8000/students")
+                .then(response => response.json())
+                .then(data => {
+                    const table = document.getElementById("studentTable");
+                    const tableBody = table.querySelector("tbody");
+                    tableBody.innerHTML = ""; // Clear previous data
+                    data.Students.forEach(student => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${student.id}</td>
+                            <td>${student.name}</td>
+                            <td>${student.department}</td>
+                            <td>${student.Marks}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                    table.style.display = "table"; // Show table
+                })
+                .catch(error => {
+                    console.error("Error fetching student data:", error);
+                });
+        }
+    </script>
+</body>
+</html>
