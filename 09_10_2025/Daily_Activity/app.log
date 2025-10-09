@@ -229,3 +229,8 @@ ValueError: Simulated error for testing logs
 2025-10-09 10:59:12,533 | INFO | GET /students | Status: 200 | Duration: 0.002s
 2025-10-09 10:59:16,507 | INFO | GET /visits | Status: 200 | Duration: 0.001s
 2025-10-09 10:59:18,690 | INFO | GET /visits | Status: 200 | Duration: 0.0s
+2025-10-09 14:44:10,421 | INFO | Visit 1 times.
+2025-10-09 14:44:10,422 | INFO | GET / | Status: 404 | Duration: 0.001s
+2025-10-09 14:44:10,574 | INFO | Visit 2 times.
+2025-10-09 14:44:10,575 | INFO | GET /favicon.ico | Status: 404 | Duration: 0.0s
+2025-10-09 14:44:47,804 | INFO | GET /visits | Status: 200 | Duration: 0.008s

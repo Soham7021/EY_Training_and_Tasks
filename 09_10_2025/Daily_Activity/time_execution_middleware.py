@@ -1,13 +1,11 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
 import logging
 import time
 import traceback
-# from visit_counter import router as visit_router
-
 
 app = FastAPI()
-# app.include_router(visit_router)
+
 # ---------------- SETUP STRUCTURED LOGGING ----------------
 logging.basicConfig(
     filename="app.log",
@@ -15,45 +13,50 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-# ---------------- REQUEST LOGGING MIDDLEWARE ----------------
-count = 0
-@app.middleware("http")
-async def log_requests(request: Request, call_next):
-    global count
-    if request.url.path != "/visits":
-        count += 1
-        logging.info(f"Visit {count} times.")
+# ---------------- VISIT COUNTER ----------------
+visit_count = 0
 
-#comment
-    start = time.time()
+# ---------------- MIDDLEWARE ----------------
+@app.middleware("http")
+async def log_and_time_requests(request: Request, call_next):
+    global visit_count
+
+    start_time = time.time()
+
+    # Count visits (excluding /visits endpoint)
+    if request.url.path != "/visits":
+        visit_count += 1
+        logging.info(f"Visit {visit_count} times.")
+
     try:
-        response = await call_next(request)
+        response: Response = await call_next(request)
     except Exception as e:
-        duration = round(time.time() - start, 3)
+        duration = round(time.time() - start_time, 4)
         logging.error(
             f"Exception in {request.method} {request.url.path}: {str(e)}\n{traceback.format_exc()}"
         )
         raise e
-    duration = round(time.time() - start, 3)
+
+    duration = round(time.time() - start_time, 4)
+    response.headers["X-Process-Time"] = str(duration)
+
     logging.info(
         f"{request.method} {request.url.path} | Status: {response.status_code} | Duration: {duration}s"
     )
+
     return response
 
 # ---------------- ROUTES ----------------
 students = [{"id": 1, "name": "Rahul"}, {"id": 2, "name": "Neha"}]
 
-@app.get("/visits")
-def get_visits():
-    global count
-    return count
-
-
-
 @app.get("/students")
 def get_students():
     logging.info("Fetching all students from database...")
     return students
+
+@app.get("/visits")
+def get_visits():
+    return {"visit_count": visit_count}
 
 @app.get("/error-demo")
 def error_demo():
