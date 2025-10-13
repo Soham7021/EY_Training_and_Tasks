@@ -1,0 +1,5 @@
+OrderID,CustomerID,Name,Country,Segment,ProductName,Category,Quantity,Price,TotalAmount,OrderMonth
+O003,C001,Neha,India,Individual,Keyboard,Accessories,3,35,105,10
+O009,C001,Neha,India,Individual,Headphones,Audio,2,50,100,10
+O002,C002,Ali,UAE,Corporate,Smartphone,Electronics,2,600,1200,10
+O005,C005,Arjun,India,Corporate,Mouse,Accessories,10,20,200,10
