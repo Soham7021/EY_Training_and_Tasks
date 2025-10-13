@@ -1,0 +1,8 @@
+2025-10-13 16:05:23,733 - INFO - Pipeline started.
+2025-10-13 16:05:23,741 - INFO - Extract done
+2025-10-13 16:05:23,747 - INFO - Merge done
+2025-10-13 16:05:23,752 - INFO - Transform 2 done
+2025-10-13 16:05:23,790 - INFO - Filter done
+2025-10-13 16:05:23,846 - INFO - Groupby done
+2025-10-13 16:05:23,872 - INFO - Groupby done
+2025-10-13 16:05:23,879 - INFO - Load done
