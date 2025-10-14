@@ -1,0 +1,24 @@
+2025-10-14 10:24:08,725 - INFO - Queue initiated
+2025-10-14 10:24:08,727 - INFO - Produced: 71
+2025-10-14 10:24:08,727 - INFO - Consumed: 71
+2025-10-14 10:24:09,728 - INFO - Produced: 45
+2025-10-14 10:24:10,728 - INFO - Consumed: 45
+2025-10-14 10:24:10,729 - INFO - Produced: 12
+2025-10-14 10:24:11,729 - INFO - Produced: 49
+2025-10-14 10:24:12,730 - INFO - Consumed: 12
+2025-10-14 10:24:12,733 - INFO - Produced: 20
+2025-10-14 10:24:14,343 - INFO - Produced: 2
+2025-10-14 10:24:15,063 - INFO - Consumed: 49
+2025-10-14 10:24:15,344 - INFO - Produced: 87
+2025-10-14 10:24:16,345 - INFO - Produced: 42
+2025-10-14 10:24:17,395 - INFO - Consumed: 20
+2025-10-14 10:24:17,397 - INFO - Produced: 32
+2025-10-14 10:24:18,400 - INFO - Produced: 27
+2025-10-14 10:24:19,396 - INFO - Consumed: 2
+2025-10-14 10:24:19,402 - INFO - Producer finished producing
+2025-10-14 10:24:21,878 - INFO - Consumed: 87
+2025-10-14 10:24:23,880 - INFO - Consumed: 42
+2025-10-14 10:24:25,881 - INFO - Consumed: 32
+2025-10-14 10:24:28,048 - INFO - Consumed: 27
+2025-10-14 10:24:30,243 - INFO - Consumer finished consuming
+2025-10-14 10:24:30,418 - INFO - Producer-Consumer thread finished
