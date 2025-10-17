@@ -4,19 +4,14 @@ import pandas as pd
 import schedule
 import time
 
-# ----------------------------
 # Paths
-# ----------------------------
-data_folder = Path(__file__).resolve().parent.parent.parent / "data"
+data_folder = Path(__file__).resolve().parent.parent / "data"
 processed_csv = data_folder / "processed_shipments.csv"
 
 # Create daily_summaries folder inside data
 daily_summaries_folder = data_folder / "daily_summaries"
 daily_summaries_folder.mkdir(exist_ok=True)
 
-# ----------------------------
-# Function to generate daily summary
-# ----------------------------
 def generate_daily_summary():
     today_str = datetime.now().strftime("%Y%m%d")
     daily_file = daily_summaries_folder / f"daily_shipments_{today_str}.csv"
@@ -27,6 +22,12 @@ def generate_daily_summary():
     # Ensure date columns are datetime
     df['DispatchDate'] = pd.to_datetime(df['DispatchDate'])
     df['DeliveryDate'] = pd.to_datetime(df['DeliveryDate'])
+
+    # Compute TotalValue and DeliveryDays if not already present
+    if 'TotalValue' not in df.columns:
+        df['TotalValue'] = df['Quantity'] * df['UnitPrice']
+    if 'DeliveryDays' not in df.columns:
+        df['DeliveryDays'] = (df['DeliveryDate'] - df['DispatchDate']).dt.days
 
     # Aggregate daily summary per warehouse
     daily_summary = df.groupby('WarehouseID').agg(
@@ -40,10 +41,8 @@ def generate_daily_summary():
     daily_summary.to_csv(daily_file, index=False)
     print(f"✅ Daily shipment summary saved at: {daily_file}")
 
-# ----------------------------
-# Schedule daily task at 07:00
-# ----------------------------
-schedule.every().day.at("12:59").do(generate_daily_summary)
+# Schedule daily task at 07:00 AM
+schedule.every().day.at("07:00").do(generate_daily_summary)
 
 print("Scheduler started. Daily summary will run at 07:00 AM every day.")
 
