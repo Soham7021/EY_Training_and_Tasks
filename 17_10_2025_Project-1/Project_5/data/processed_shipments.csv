@@ -1,6 +1,6 @@
-ShipmentID,ProductID,WarehouseID,Quantity,DispatchDate,DeliveryDate,ProductName,Category,UnitPrice,Location,Capacity,TotalValue,DeliveryDays
-S001,P101,W01,100,2025-10-01,2025-10-05,Laptop,Electronics,800.0,Mumbai,1000,80000.0,4
-S002,P102,W02,300,2025-10-02,2025-10-06,Mouse,Accessories,20.0,Delhi,800,6000.0,4
-S003,P103,W01,150,2025-10-03,2025-10-08,Keyboard,Accessories,35.0,Mumbai,1000,5250.0,5
-S004,P104,W03,50,2025-10-04,2025-10-09,Monitor,Electronics,150.0,Chennai,600,7500.0,5
-S005,P105,W02,200,2025-10-05,2025-10-12,Router,Networking,90.0,Delhi,800,18000.0,7
+ShipmentID,ProductID,WarehouseID,Quantity,DispatchDate,DeliveryDate,ProductName,Category,UnitPrice,Location,Capacity,TotalValue,DeliveryDays,DeliveryStatus
+S001,P101,W01,100,2025-10-01,2025-10-05,Laptop,Electronics,800.0,Mumbai,1000,80000.0,4,In Transit
+S002,P102,W02,300,2025-10-02,2025-10-06,Mouse,Accessories,20.0,Delhi,800,6000.0,4,Delivered
+S003,P103,W01,150,2025-10-03,2025-10-08,Keyboard,Accessories,35.0,Mumbai,1000,5250.0,5,Dispatched
+S004,P104,W03,50,2025-10-04,2025-10-09,Monitor,Electronics,150.0,Chennai,600,7500.0,5,Delivered
+S005,P105,W02,200,2025-10-05,2025-10-12,Router,Networking,90.0,Delhi,800,18000.0,7,In Transit
