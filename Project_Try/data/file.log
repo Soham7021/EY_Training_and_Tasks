@@ -1,0 +1,13 @@
+2025-10-17 13:39:15,205 - INFO - Successfully created products.csv
+2025-10-17 13:39:15,205 - INFO - Successfully created warehouses.csv
+2025-10-17 13:39:15,205 - INFO - Successfully created shipments.csv
+2025-10-17 14:32:55,356 - INFO - Successfully created products.csv
+2025-10-17 14:32:55,358 - INFO - Successfully created warehouses.csv
+2025-10-17 14:32:55,360 - INFO - Successfully created shipments.csv
+2025-10-17 14:33:13,391 - INFO - Successfully created products.csv
+2025-10-17 14:33:13,393 - INFO - Successfully created warehouses.csv
+2025-10-17 14:33:13,395 - INFO - Successfully created shipments.csv
+2025-10-17 15:33:40,506 - INFO - Product with ID '9' has been added.
+2025-10-17 15:33:50,058 - INFO - Product 9 deleted.
+2025-10-17 15:34:13,237 - INFO - Warehouse W03 capacity updated.
+2025-10-17 15:34:56,682 - INFO - Warehouse W03 capacity updated.
