@@ -1,0 +1,9 @@
+Metric,Key,Value,ExtraInfo
+AvgDeliveryTime,W01,4.5,days
+AvgDeliveryTime,W02,5.5,days
+AvgDeliveryTime,W03,5.0,days
+TotalValuePerCategory,Accessories,11250.0,currency
+TotalValuePerCategory,Electronics,87500.0,currency
+TotalValuePerCategory,Networking,18000.0,currency
+ShipmentsPerMonth,2025-10,5.0,shipments
+LateDelivery,S005,7.0,"Warehouse=W02, Product=P105"
