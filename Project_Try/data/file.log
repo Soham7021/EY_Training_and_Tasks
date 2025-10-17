@@ -11,3 +11,102 @@
 2025-10-17 15:33:50,058 - INFO - Product 9 deleted.
 2025-10-17 15:34:13,237 - INFO - Warehouse W03 capacity updated.
 2025-10-17 15:34:56,682 - INFO - Warehouse W03 capacity updated.
+2025-10-17 15:58:56,869 - INFO - Product 'P109' added successfully.
+2025-10-17 16:01:22,958 - INFO - Product 'P109' deleted successfully.
+2025-10-17 16:10:58,675 - INFO - Processed shipments saved to processed_shipments.csv
+2025-10-17 16:19:49,611 - INFO - Shipment S001 dispatched and added to queue
+2025-10-17 16:19:49,611 - INFO - Shipment S002 dispatched and added to queue
+2025-10-17 16:19:49,611 - INFO - Shipment S003 dispatched and added to queue
+2025-10-17 16:19:49,611 - INFO - Shipment S004 dispatched and added to queue
+2025-10-17 16:19:49,611 - INFO - Shipment S005 dispatched and added to queue
+2025-10-17 16:19:49,627 - INFO - Shipment S001 delivered after 4 days
+2025-10-17 16:19:49,743 - INFO - Shipment S002 delivered after 4 days
+2025-10-17 16:19:49,844 - INFO - Shipment S003 delivered after 5 days
+2025-10-17 16:19:49,946 - INFO - Shipment S004 delivered after 5 days
+2025-10-17 16:19:50,049 - INFO - Shipment S005 delivered after 7 days
+2025-10-17 16:22:14,768 - INFO - Shipment S001 dispatched and added to queue
+2025-10-17 16:22:14,768 - INFO - Shipment S002 dispatched and added to queue
+2025-10-17 16:22:14,768 - INFO - Shipment S003 dispatched and added to queue
+2025-10-17 16:22:14,768 - INFO - Shipment S004 dispatched and added to queue
+2025-10-17 16:22:14,768 - INFO - Shipment S005 dispatched and added to queue
+2025-10-17 16:22:14,768 - INFO - Shipment S001 delivered after 4 days
+2025-10-17 16:22:14,877 - INFO - Shipment S002 delivered after 4 days
+2025-10-17 16:22:14,978 - INFO - Shipment S003 delivered after 5 days
+2025-10-17 16:22:15,080 - INFO - Shipment S004 delivered after 5 days
+2025-10-17 16:22:15,181 - INFO - Shipment S005 delivered after 7 days
+2025-10-17 16:31:26,883 - INFO - Producer started pushing shipment updates...
+2025-10-17 16:31:26,883 - INFO - Pushed message: {'ShipmentID': 'S001', 'Status': 'Dispatched'}
+2025-10-17 16:31:27,384 - INFO - Pushed message: {'ShipmentID': 'S002', 'Status': 'In Transit'}
+2025-10-17 16:31:27,884 - INFO - Pushed message: {'ShipmentID': 'S003', 'Status': 'Delivered'}
+2025-10-17 16:31:28,385 - INFO - Pushed message: {'ShipmentID': 'S004', 'Status': 'Dispatched'}
+2025-10-17 16:31:28,885 - INFO - Pushed message: {'ShipmentID': 'S005', 'Status': 'Delivered'}
+2025-10-17 16:31:29,386 - INFO - All shipment messages pushed.
+2025-10-17 16:31:29,386 - INFO - Consumer started processing shipment updates...
+2025-10-17 16:31:29,388 - INFO - Processed ShipmentID S001, Status: Dispatched
+2025-10-17 16:31:29,890 - INFO - Processed ShipmentID S002, Status: In Transit
+2025-10-17 16:31:30,391 - INFO - Processed ShipmentID S003, Status: Delivered
+2025-10-17 16:31:30,893 - INFO - Processed ShipmentID S004, Status: Dispatched
+2025-10-17 16:31:31,393 - INFO - Processed ShipmentID S005, Status: Delivered
+2025-10-17 16:31:31,897 - INFO - Updated processed shipments saved to ../data/processed_shipments.csv
+2025-10-17 16:31:31,897 - INFO - Consumer finished in 2.51 seconds
+2025-10-17 16:35:52,556 - INFO - Producer started pushing shipment updates...
+2025-10-17 16:35:52,556 - INFO - Pushed message: {'ShipmentID': 'S001', 'Status': 'Dispatched'}
+2025-10-17 16:35:53,058 - INFO - Pushed message: {'ShipmentID': 'S002', 'Status': 'Dispatched'}
+2025-10-17 16:35:53,559 - INFO - Pushed message: {'ShipmentID': 'S003', 'Status': 'Delivered'}
+2025-10-17 16:35:54,060 - INFO - Pushed message: {'ShipmentID': 'S004', 'Status': 'In Transit'}
+2025-10-17 16:35:54,561 - INFO - Pushed message: {'ShipmentID': 'S005', 'Status': 'Dispatched'}
+2025-10-17 16:35:55,061 - INFO - All shipment messages pushed.
+2025-10-17 16:35:55,061 - INFO - Consumer started processing shipment updates...
+2025-10-17 16:35:55,062 - INFO - Processed ShipmentID S001, Status: Dispatched
+2025-10-17 16:35:55,564 - INFO - Processed ShipmentID S002, Status: Dispatched
+2025-10-17 16:35:56,066 - INFO - Processed ShipmentID S003, Status: Delivered
+2025-10-17 16:35:56,567 - INFO - Processed ShipmentID S004, Status: In Transit
+2025-10-17 16:35:57,069 - INFO - Processed ShipmentID S005, Status: Dispatched
+2025-10-17 16:35:57,572 - INFO - Updated processed shipments saved to ../data/processed_shipments.csv
+2025-10-17 16:35:57,573 - INFO - Consumer finished in 2.51 seconds
+2025-10-17 16:36:18,097 - INFO - Producer started pushing shipment updates...
+2025-10-17 16:36:18,098 - INFO - Pushed message: {'ShipmentID': 'S001', 'Status': 'Dispatched'}
+2025-10-17 16:36:18,598 - INFO - Pushed message: {'ShipmentID': 'S002', 'Status': 'Delivered'}
+2025-10-17 16:36:19,099 - INFO - Pushed message: {'ShipmentID': 'S003', 'Status': 'In Transit'}
+2025-10-17 16:36:19,600 - INFO - Pushed message: {'ShipmentID': 'S004', 'Status': 'In Transit'}
+2025-10-17 16:36:20,100 - INFO - Pushed message: {'ShipmentID': 'S005', 'Status': 'In Transit'}
+2025-10-17 16:36:20,601 - INFO - All shipment messages pushed.
+2025-10-17 16:36:20,601 - INFO - Consumer started processing shipment updates...
+2025-10-17 16:36:20,602 - INFO - Processed ShipmentID S001, Status: Dispatched
+2025-10-17 16:36:21,104 - INFO - Processed ShipmentID S002, Status: Delivered
+2025-10-17 16:36:21,605 - INFO - Processed ShipmentID S003, Status: In Transit
+2025-10-17 16:36:22,106 - INFO - Processed ShipmentID S004, Status: In Transit
+2025-10-17 16:36:22,608 - INFO - Processed ShipmentID S005, Status: In Transit
+2025-10-17 16:36:23,111 - INFO - Updated processed shipments saved to ../data/processed_shipments.csv
+2025-10-17 16:36:23,111 - INFO - Consumer finished in 2.51 seconds
+2025-10-17 16:37:12,105 - INFO - Producer started pushing shipment updates...
+2025-10-17 16:37:12,106 - INFO - Pushed message: {'ShipmentID': 'S001', 'Status': 'In Transit'}
+2025-10-17 16:37:12,606 - INFO - Pushed message: {'ShipmentID': 'S002', 'Status': 'Delivered'}
+2025-10-17 16:37:13,108 - INFO - Pushed message: {'ShipmentID': 'S003', 'Status': 'Delivered'}
+2025-10-17 16:37:13,608 - INFO - Pushed message: {'ShipmentID': 'S004', 'Status': 'Dispatched'}
+2025-10-17 16:37:14,109 - INFO - Pushed message: {'ShipmentID': 'S005', 'Status': 'Delivered'}
+2025-10-17 16:37:14,610 - INFO - All shipment messages pushed.
+2025-10-17 16:37:14,610 - INFO - Consumer started processing shipment updates...
+2025-10-17 16:37:14,611 - INFO - Processed ShipmentID S001, Status: In Transit
+2025-10-17 16:37:15,113 - INFO - Processed ShipmentID S002, Status: Delivered
+2025-10-17 16:37:15,614 - INFO - Processed ShipmentID S003, Status: Delivered
+2025-10-17 16:37:16,116 - INFO - Processed ShipmentID S004, Status: Dispatched
+2025-10-17 16:37:16,618 - INFO - Processed ShipmentID S005, Status: Delivered
+2025-10-17 16:37:17,121 - INFO - Updated processed shipments saved to ../data/processed_shipments.csv
+2025-10-17 16:37:17,121 - INFO - Consumer finished in 2.51 seconds
+2025-10-17 16:38:46,010 - INFO - Processed shipments saved to processed_shipments.csv
+2025-10-17 16:39:02,866 - INFO - Producer started pushing shipment updates...
+2025-10-17 16:39:02,867 - INFO - Pushed message: {'ShipmentID': 'S001', 'Status': 'In Transit'}
+2025-10-17 16:39:03,368 - INFO - Pushed message: {'ShipmentID': 'S002', 'Status': 'In Transit'}
+2025-10-17 16:39:03,869 - INFO - Pushed message: {'ShipmentID': 'S003', 'Status': 'In Transit'}
+2025-10-17 16:39:04,369 - INFO - Pushed message: {'ShipmentID': 'S004', 'Status': 'In Transit'}
+2025-10-17 16:39:04,870 - INFO - Pushed message: {'ShipmentID': 'S005', 'Status': 'Dispatched'}
+2025-10-17 16:39:05,371 - INFO - All shipment messages pushed.
+2025-10-17 16:39:05,371 - INFO - Consumer started processing shipment updates...
+2025-10-17 16:39:05,374 - INFO - Processed ShipmentID S001, Status: In Transit
+2025-10-17 16:39:05,875 - INFO - Processed ShipmentID S002, Status: In Transit
+2025-10-17 16:39:06,376 - INFO - Processed ShipmentID S003, Status: In Transit
+2025-10-17 16:39:06,877 - INFO - Processed ShipmentID S004, Status: In Transit
+2025-10-17 16:39:07,380 - INFO - Processed ShipmentID S005, Status: Dispatched
+2025-10-17 16:39:07,883 - INFO - Updated processed shipments saved to ../data/processed_shipments.csv
+2025-10-17 16:39:07,883 - INFO - Consumer finished in 2.51 seconds
