@@ -1,0 +1,6 @@
+ProductID,ProductName,Category,UnitPrice
+P101,Laptop,Electronics,800.0
+P102,Mouse,Accessories,20.0
+P103,Keyboard,Accessories,35.0
+P104,Monitor,Electronics,150.0
+P105,Router,Networking,90.0
