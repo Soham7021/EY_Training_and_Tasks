@@ -1,5 +1,5 @@
 import pandas as pd
-import os
+
 
 
 processed_csv = "data/processed_shipments.csv"
