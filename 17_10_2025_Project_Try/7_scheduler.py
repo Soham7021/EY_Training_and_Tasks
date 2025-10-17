@@ -1,39 +1,52 @@
-import os
+from pathlib import Path
+from datetime import datetime
 import pandas as pd
-import datetime
 import schedule
 import time
 
-os.makedirs("daily_reports", exist_ok=True)
+# Paths
+data_folder = Path("data")
+processed_csv = data_folder / "processed_shipments.csv"
 
-processed_csv = "data/processed_shipments.csv"
-daily_folder = "daily_reports"
-
+# Create daily_reports folder inside data
+daily_reports_folder = data_folder / "daily_reports"
+daily_reports_folder.mkdir(exist_ok=True)
 
 def generate_daily_summary():
-    df = pd.read_csv(processed_csv, parse_dates=["DispatchDate", "DeliveryDate"])
+    today_str = datetime.now().strftime("%Y%m%d")
+    daily_file = daily_reports_folder / f"daily_shipments_{today_str}.csv"
 
-    df["TotalValue"] = df["Quantity"] * df["UnitPrice"]
-    df["DeliveryDays"] = (df["DeliveryDate"] - df["DispatchDate"]).dt.days
+    # Load processed shipments
+    df = pd.read_csv(processed_csv)
 
-    today = pd.Timestamp.now().normalize()
-    daily_df = df[df["DispatchDate"] == today]
+    # Ensure date columns are datetime
+    df['DispatchDate'] = pd.to_datetime(df['DispatchDate'])
+    df['DeliveryDate'] = pd.to_datetime(df['DeliveryDate'])
 
-    if daily_df.empty:
-        print(f"No shipments dispatched on {today.date()}")
-        return
+    # Compute TotalValue and DeliveryDays if not already present
+    if 'TotalValue' not in df.columns:
+        df['TotalValue'] = df['Quantity'] * df['UnitPrice']
+    if 'DeliveryDays' not in df.columns:
+        df['DeliveryDays'] = (df['DeliveryDate'] - df['DispatchDate']).dt.days
 
-    filename = f"daily_shipments_{today.strftime('%Y%m%d')}.csv"
-    filepath = os.path.join(daily_folder, filename)
-    daily_df.to_csv(filepath, index=False)
+    # Aggregate daily summary per warehouse
+    daily_summary = df.groupby('WarehouseID').agg(
+        TotalShipments=('ShipmentID', 'count'),
+        TotalQuantity=('Quantity', 'sum'),
+        TotalValue=('TotalValue', 'sum'),
+        AvgDeliveryDays=('DeliveryDays', 'mean')
+    ).reset_index()
 
-    print(f"Daily shipment summary saved: {filepath}")
+    # Save daily summary
+    daily_summary.to_csv(daily_file, index=False)
+    print(f"✅ Daily shipment summary saved at: {daily_file}")
 
+# Schedule daily task at 07:00 AM
+schedule.every().day.at("17:32").do(generate_daily_summary)
 
-schedule.every().day.at("17:04").do(generate_daily_summary)
+print("Scheduler started. Daily summary will run at 07:00 AM every day.")
 
-print("Daily shipment scheduler running... Press Ctrl+C to stop.")
-
+# Keep the script running
 while True:
     schedule.run_pending()
-    time.sleep(30)
+    time.sleep(60)
