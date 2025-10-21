@@ -77,7 +77,7 @@ def update_warehouse():
 
 def main():
     while True:
-        print("\n--- CRUD Operations Menu ---")
+        print("--- CRUD Operations Menu ---")
         print("1. Add a new product")
         print("2. Delete a product")
         print("3. Fetch all Electronics products")
@@ -98,7 +98,7 @@ def main():
             update_warehouse()
 
         elif choice == "5":
-            print("Thank you for using our application. See you soon!")
+            print("Thank you!")
             break
         else:
             print("Please enter a valid choice.")
