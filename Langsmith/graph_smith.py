@@ -8,7 +8,6 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import StateGraph,START, END
 from pydantic import BaseModel, Field
 
-
 load_dotenv()
 
 api_key = os.getenv("OPENROUTER_API_KEY")
@@ -30,14 +29,13 @@ llm = ChatOpenAI(
 class EmailEvaluation(BaseModel):
     score: float = Field(..., ge=0, le=10, description="Evaluation score of the email on a scale from 0 to 10.")
     feedback: str = Field(..., description="Constructive feedback explaining the score and how the email can be improved.")
+    # actually this feedback is not used anywhere this was just used to check the concept of the 'State' ignore it
 
 
 class EmailState(TypedDict):
   email_topic: str
   email: str
   score: float
-  # history: list[]
-  # approved: bool
   iteration: int
   max_iteration: int
 
@@ -47,6 +45,7 @@ def Writer(state: EmailState):
       SystemMessage(content="You are a very average Email writer and you learn slowly"),
       HumanMessage(content=f"""Write a Email on this topic{state['email_topic']}""")
   ]
+
   response = llm.invoke(message).content
   return {'email': response}
 
@@ -55,17 +54,18 @@ def Evaluator(state: EmailState):
     message = [
         SystemMessage(
             content=(
-                "You are an email evaluation assistant. "
+                "You are an email evaluator."
                 "Evaluate the following email and respond ONLY in JSON format with the following fields: "
                 "{'score': <float from 0 to 10>, 'feedback': <string>}. "
-                "Do not include any text outside the JSON."
+                "and please do not include any text outside the JSON."
             )
         ),
         HumanMessage(content=state['email'])
     ]
     response = evaluator_llm.invoke(message)
-    # return {'score': response.score}
-    return {'score': response.score, 'feedback': response.feedback}
+    # Here we are using another LLM same LLm with the pydantic model for the structured output check like number 29 and 52
+    return {'score': response.score}
+    # return {'score': response.score, 'feedback': response.feedback} # this is just to see the concept of State Ignore it
 
 
 def Optimizer(state:EmailState):
