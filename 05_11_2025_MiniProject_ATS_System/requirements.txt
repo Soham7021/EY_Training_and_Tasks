@@ -1,0 +1,17 @@
+streamlit
+python-dotenv
+
+# LangChain + OpenRouter
+langchain
+langchain-openai
+langgraph
+
+# PDF Processing
+PyPDF2
+
+# Machine Learning / Text Similarity
+scikit-learn
+numpy
+
+# Email
+secure-smtplib
