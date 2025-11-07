@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Chatbot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fa;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 { text-align: center; color: #333; }
+    #chat-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      background: white;
+      height: 400px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+    }
+    .user { color: blue; margin: 8px 0; }
+    .bot { color: green; margin: 8px 0; }
+    #input-box {
+      display: flex;
+      gap: 10px;
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 16px;
+      background: #007bff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <h1>Chatbot</h1>
+  <div id="chat-box"></div>
+  <div id="input-box">
+    <input type="text" id="userInput" placeholder="Ask something..." />
+    <button onclick="sendQuery()">Send</button>
+  </div>
+
+  <script>
+    async function sendQuery() {
+      const input = document.getElementById("userInput");
+      const chatBox = document.getElementById("chat-box");
+      const query = input.value.trim();
+
+      if (!query) {
+        alert("Please enter a question!");
+        return;
+      }
+
+      chatBox.innerHTML += `<div class="user"><strong>You:</strong> ${query}</div>`;
+      input.value = "";
+
+      try {
+        const response = await fetch("/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query })
+        });
+        const data = await response.json();
+
+        if (data.response) {
+          chatBox.innerHTML += `<div class="bot"><strong>Bot:</strong> ${data.response}</div>`;
+        } else {
+          chatBox.innerHTML += `<div class="bot"><strong>Error:</strong> ${data.error}</div>`;
+        }
+        chatBox.scrollTop = chatBox.scrollHeight;
+      } catch (err) {
+        chatBox.innerHTML += `<div class="bot"><strong>Error:</strong> ${err.message}</div>`;
+      }
+    }
+  </script>
+</body>
+</html>

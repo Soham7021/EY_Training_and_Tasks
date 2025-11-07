@@ -1,0 +1,30 @@
+[
+    {
+        "question": "Hi",
+        "answer": "Hi! It's nice to meet you. Is there something I can help you with or would you like to chat?"
+    },
+    {
+        "question": "Explain Fastapi in one line",
+        "answer": "FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ and above, with automatic interactive API documentation and support for Pydantic data validation."
+    },
+    {
+        "question": "Hi",
+        "answer": "Hi! It's nice to meet you! Is there something I can help you with, or would you like to chat? I'm here to assist you with any questions or tasks you may have."
+    },
+    {
+        "question": "How are you",
+        "answer": "I'm doing well, thank you for asking! I'm a helpful assistant, here to assist you with any questions or tasks you may have. How can I help you today? Do you have a specific topic in mind that you'd like to discuss or a task you'd like me to help with? I'm all ears!"
+    },
+    {
+        "question": "Who is PM of india",
+        "answer": "As of my knowledge cutoff, the current Prime Minister of India is Narendra Damodardas Modi. He has been serving as the Prime Minister of India since May 26, 2014, and is currently the incumbent Prime Minister."
+    },
+    {
+        "question": "what was my last question",
+        "answer": "I apologize, but this is the beginning of our conversation, and you haven't asked any questions yet! I'm here to help with any questions you might have, though. What's on your mind?"
+    },
+    {
+        "question": "What is turtle rock",
+        "answer": "\"Turtle Rock\" can refer to several things, depending on the context. Here are a few possibilities:\n\n1. **Geological feature**: In geology, a turtle rock is a type of rock formation that resembles a turtle's shell. It's typically a rounded, dome-shaped rock with a flat top and a steep, curved slope. These formations are often found in areas where there has been significant erosion, such as in canyons or on beaches.\n2. **Company name**: Turtle Rock Studios is a video game development company founded in 2002 by former Valve Corporation employees. The company is best known for developing the popular game series \"Left 4 Dead\" and \"Dishonored\".\n3. **Location**: Turtle Rock is also the name of a small island in the English Channel, located off the coast of Kent, England. The island is a small, rocky outcrop with a distinctive turtle-shaped appearance.\n4. **Other meanings**: In some cultures, \"turtle rock\" or \"turtle rock hill\" can refer to a specific location or landmark that is shaped like a turtle or has a turtle-like appearance.\n\nWithout more context, it's difficult to determine which definition is most relevant. If you have any additional information or clarification, I'd be happy"
+    }
+]
