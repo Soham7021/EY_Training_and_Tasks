@@ -1,0 +1,12 @@
+2025-11-10 10:20:59,519 INFO openrouter-llm-app - API /process called with: Hi
+2025-11-10 10:21:01,207 INFO httpx - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 10:21:01,336 INFO openrouter-llm-app - Response generated successfully, length=34
+2025-11-10 10:21:37,194 INFO openrouter-llm-app - API /process called with: what is todays date
+2025-11-10 10:21:38,995 INFO httpx - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 10:21:40,713 INFO openrouter-llm-app - Response generated successfully, length=631
+2025-11-10 10:23:23,028 INFO openrouter-llm-app - API /process called with: what is todays date
+2025-11-10 10:23:24,860 INFO httpx - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 10:23:25,049 INFO openrouter-llm-app - Response generated successfully, length=41
+2025-11-10 10:24:31,943 INFO openrouter-llm-app - API /process called with: what is yestedays date
+2025-11-10 10:24:33,257 INFO httpx - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 10:24:33,607 INFO openrouter-llm-app - Response generated successfully, length=45

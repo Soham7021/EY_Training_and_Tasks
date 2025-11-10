@@ -1,0 +1,71 @@
+2025-11-10 10:04:25,028 INFO langgraph-app - API /process called with: hi
+2025-11-10 10:04:25,032 INFO langgraph-app - Router received: hi
+2025-11-10 10:04:25,032 INFO langgraph-app - Router chose route: ans
+2025-11-10 10:04:25,033 INFO langgraph-app - LLM node sending to model: hi
+2025-11-10 10:04:25,033 ERROR langgraph-app - LLM call failed
+Traceback (most recent call last):
+  File "C:\Users\user1\PycharmProjects\EY_Training\10_11_2025\Daily_Activity\main_graph.py", line 126, in ans_node
+    out = llm([HumanMessage(content=prompt)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'ChatOpenAI' object is not callable
+2025-11-10 10:04:25,038 INFO langgraph-app - LLM node result length: 52
+2025-11-10 10:04:37,788 INFO langgraph-app - API /process called with: ad 45 and 45
+2025-11-10 10:04:37,789 INFO langgraph-app - Router received: ad 45 and 45
+2025-11-10 10:04:37,789 INFO langgraph-app - Router chose route: ans
+2025-11-10 10:04:37,790 INFO langgraph-app - LLM node sending to model: ad 45 and 45
+2025-11-10 10:04:37,790 ERROR langgraph-app - LLM call failed
+Traceback (most recent call last):
+  File "C:\Users\user1\PycharmProjects\EY_Training\10_11_2025\Daily_Activity\main_graph.py", line 126, in ans_node
+    out = llm([HumanMessage(content=prompt)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'ChatOpenAI' object is not callable
+2025-11-10 10:04:37,791 INFO langgraph-app - LLM node result length: 52
+2025-11-10 10:05:13,637 INFO langgraph-app - API /process called with: what is todays date
+2025-11-10 10:05:13,641 INFO langgraph-app - Router received: what is todays date
+2025-11-10 10:05:13,641 INFO langgraph-app - Router chose route: date
+2025-11-10 10:05:13,643 INFO langgraph-app - Date node result: Today's date is Monday, 10 November 2025
+2025-11-10 10:05:27,881 INFO langgraph-app - API /process called with: add 43 and 56
+2025-11-10 10:05:27,882 INFO langgraph-app - Router received: add 43 and 56
+2025-11-10 10:05:27,882 INFO langgraph-app - Router chose route: ans
+2025-11-10 10:05:27,883 INFO langgraph-app - LLM node sending to model: add 43 and 56
+2025-11-10 10:05:27,883 ERROR langgraph-app - LLM call failed
+Traceback (most recent call last):
+  File "C:\Users\user1\PycharmProjects\EY_Training\10_11_2025\Daily_Activity\main_graph.py", line 126, in ans_node
+    out = llm([HumanMessage(content=prompt)])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'ChatOpenAI' object is not callable
+2025-11-10 10:05:27,884 INFO langgraph-app - LLM node result length: 52
+2025-11-10 10:07:07,462 INFO langgraph-app - API /process called with: add 43 and 56
+2025-11-10 10:07:07,465 INFO langgraph-app - Router received: add 43 and 56
+2025-11-10 10:07:07,465 INFO langgraph-app - Router chose route: ans
+2025-11-10 10:07:07,466 INFO langgraph-app - LLM node sending to model: add 43 and 56
+2025-11-10 10:07:08,913 INFO httpx - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 10:07:09,023 INFO langgraph-app - LLM node result length: 12
+2025-11-10 10:07:20,252 INFO langgraph-app - API /process called with: waht is todays date
+2025-11-10 10:07:20,253 INFO langgraph-app - Router received: waht is todays date
+2025-11-10 10:07:20,253 INFO langgraph-app - Router chose route: date
+2025-11-10 10:07:20,254 INFO langgraph-app - Date node result: Today's date is Monday, 10 November 2025
+2025-11-10 10:07:27,317 INFO langgraph-app - API /process called with: waht is yesterdays date
+2025-11-10 10:07:27,318 INFO langgraph-app - Router received: waht is yesterdays date
+2025-11-10 10:07:27,318 INFO langgraph-app - Router chose route: date
+2025-11-10 10:07:27,319 INFO langgraph-app - Date node result: 2025-11-10T10:07:27.319155
+2025-11-10 10:07:34,347 INFO langgraph-app - API /process called with: waht is todas date
+2025-11-10 10:07:34,348 INFO langgraph-app - Router received: waht is todas date
+2025-11-10 10:07:34,348 INFO langgraph-app - Router chose route: date
+2025-11-10 10:07:34,349 INFO langgraph-app - Date node result: 2025-11-10T10:07:34.349156
+2025-11-10 10:07:42,910 INFO langgraph-app - API /process called with: what is todays date
+2025-11-10 10:07:42,911 INFO langgraph-app - Router received: what is todays date
+2025-11-10 10:07:42,911 INFO langgraph-app - Router chose route: date
+2025-11-10 10:07:42,912 INFO langgraph-app - Date node result: Today's date is Monday, 10 November 2025
+2025-11-10 10:07:57,347 INFO langgraph-app - API /process called with: reverse Soham
+2025-11-10 10:07:57,348 INFO langgraph-app - Router received: reverse soham
+2025-11-10 10:07:57,349 INFO langgraph-app - Router chose route: ans
+2025-11-10 10:07:57,349 INFO langgraph-app - LLM node sending to model: reverse Soham
+2025-11-10 10:07:58,792 INFO httpx - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 10:07:59,124 INFO langgraph-app - LLM node result length: 34
+2025-11-10 10:11:32,056 INFO langgraph-app - API /process called with: how are you
+2025-11-10 10:11:32,059 INFO langgraph-app - Router received: how are you
+2025-11-10 10:11:32,059 INFO langgraph-app - Router chose route: ans
+2025-11-10 10:11:32,060 INFO langgraph-app - LLM node sending to model: how are you
+2025-11-10 10:11:33,786 INFO httpx - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-10 10:11:34,467 INFO langgraph-app - LLM node result length: 192
