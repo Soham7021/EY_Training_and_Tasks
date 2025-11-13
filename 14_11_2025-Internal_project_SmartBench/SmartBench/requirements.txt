@@ -1,0 +1,13 @@
+streamlit
+langgraph
+langchain
+openai
+faiss-cpu
+pandas
+numpy
+python-dotenv
+langchain-openai
+langchain-chroma 
+chromadb
+graphviz 
+langchain-google-genai

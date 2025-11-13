@@ -1,0 +1,24 @@
+{
+    "project_name": "AI-Powered Customer Sentiment Analysis Dashboard",
+    "summary": "Develop an intelligent web-based dashboard for analyzing customer feedback from multiple sources, classifying sentiment, and generating real-time analytics.",
+    "required_roles": [
+        "Machine Learning Engineer",
+        "Backend Developer",
+        "Frontend Developer",
+        "Data Engineer",
+        "DevOps Engineer"
+    ],
+    "required_skills": [
+        "Python",
+        "NLP",
+        "Scikit-learn",
+        "TensorFlow/PyTorch",
+        "FastAPI / Flask",
+        "React.js / Next.js",
+        "PostgreSQL / MongoDB",
+        "Docker",
+        "AWS",
+        "CI/CD pipelines"
+    ],
+    "domain": "Artificial Intelligence / SaaS Analytics"
+}
